@@ -118,7 +118,7 @@ break_fn = gdb.selected_frame().function()
 outfile = input("\nEnter desired output file name (leave blank for default): ")
 if not outfile:
     outfile = "linetrace_{}_{}.log".format(
-        break_fn.name.split('(')[0], int(time))
+        break_fn.name.split('(')[0], int(time()))
 
 log = open(outfile, 'w')
 print("\nLogging to {}\n".format(outfile))
